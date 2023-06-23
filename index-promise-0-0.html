@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promise basic 0.0</title>
+    <style>
+
+    </style>
+
+    <script>
+        'use strict';
+
+        const promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('DEIN Promise sagt A..HICKS!');
+            }, 3000);
+        });
+
+
+        // FUNKTIONEN
+        const init = () => {
+            promise.then(data => {
+                const content = document.getElementById('content');
+                const p = document.createElement('p');
+                p.textContent = data;
+                content.appendChild(p);
+            });
+        }
+
+        // INIT
+        document.addEventListener('DOMContentLoaded', init);
+        F        </script>
+</head>
+
+<body>
+    <main>
+        <h1>
+            Promise basic 0.0
+        </h1>
+        <article id="content">
+            <p class="red">Was sagt der Promise?</p>
+        </article>
+        <article id="task">
+            <h2>
+                Tasks
+            </h2>
+            <p class="red">0.0</p>
+            <p>Gestalte einen Promise, der drei Sekunden wartet und dann ein Element Deiner Wahl im DOM erzeugt.</p>
+        </article>
+    </main>
+</body>
+
+</html>
